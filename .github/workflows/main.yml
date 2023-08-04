@@ -3,7 +3,7 @@ name: Clean Dataset
 on:
   push:
     branches:
-      - main  # Replace 'main' with the name of your main branch
+      - master  # Replace 'main' with the name of your main branch
 
 jobs:
   clean:
