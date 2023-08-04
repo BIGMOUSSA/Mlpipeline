@@ -21,6 +21,11 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+        
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Explicitly specify Node.js 16
 
       - name: Run cleanData
         run: python cleanData.py  # Replace 'path/to/clean.py' with the actual path to your clean.py script
