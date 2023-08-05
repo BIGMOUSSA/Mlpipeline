@@ -32,7 +32,7 @@ jobs:
 
       - name: Commit changes
         run: |
-          git config --local user.email "diallomous@github.com"
+          git config --local user.email "diallomous@gmail.com"
           git config --local user.name "Moussa DIALLO"
           git add .
           git commit -m "Auto clean dataset after push"
