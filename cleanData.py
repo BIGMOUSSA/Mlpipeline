@@ -47,10 +47,10 @@ print(cleaned_data.info())
 
 train_data, test_data = train_test_split(cleaned_data, shuffle=True, test_size= 0.3)
 
-train_data.to_csv('data/cleaned/train.csv', index=False)
-test_data.to_csv('data/cleaned/test.csv', index=False)
+train_data.to_csv('train.csv', index=False)
+test_data.to_csv('test.csv', index=False)
 
-"""
+
 # Create a zipped folder and add the CSV files to it
 with zipfile.ZipFile("data/cleaned", 'w') as zipf:
     zipf.write('train.csv')
@@ -60,7 +60,7 @@ with zipfile.ZipFile("data/cleaned", 'w') as zipf:
 import os
 os.remove('train.csv')
 os.remove('test.csv')
-"""
+
 
 
 
