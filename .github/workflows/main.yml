@@ -30,10 +30,3 @@ jobs:
       - name: Run cleanData
         run: python cleanData.py  # Replace 'path/to/clean.py' with the actual path to your clean.py script
 
-      - name: Commit changes
-        run: |
-          git config --local user.email "diallomous@gmail.com"
-          git config --local user.name "Moussa DIALLO"
-          git add .
-          git commit -m "Auto clean dataset after push"
-          git push
