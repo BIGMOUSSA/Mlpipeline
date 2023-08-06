@@ -52,7 +52,8 @@ test_data.to_csv('test.csv', index=False)
 
 
 # Create a zipped folder and add the CSV files to it
-with zipfile.ZipFile("data/cleaned", 'w') as zipf:
+""""""
+with zipfile.ZipFile("DataCleaned.zip", 'w') as zipf:
     zipf.write('train.csv')
     zipf.write('test.csv')
 

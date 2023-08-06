@@ -11,8 +11,16 @@ jobs:
     runs-on: ubuntu-latest  # You can choose the runner platform here
 
     steps:
+      - name: Update packages
+        run: sudo apt-get update && sudo apt-get upgrade -y
+
+      - name: Install SSH key
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -30,3 +38,10 @@ jobs:
       - name: Run cleanData
         run: python cleanData.py  # Replace 'path/to/clean.py' with the actual path to your clean.py script
 
+      - name: Mv zipped file to data/cleaned
+        run: mv *.zip data/cleaned
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: data_output
+          path: data/cleaned
