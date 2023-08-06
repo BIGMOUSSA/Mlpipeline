@@ -30,7 +30,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
         
-      run: mkdir -p output
+      - name: create output folder
+        run: mkdir -p output
 
       - name: Use Node.js 16
         uses: actions/setup-node@v2
