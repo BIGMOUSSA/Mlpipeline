@@ -41,6 +41,9 @@ jobs:
       - name: Run cleanData
         run: python cleanData.py  # Replace 'path/to/clean.py' with the actual path to your clean.py script
 
+      - name: Run training
+        run: python training.py  # Replace 'path/to/clean.py' with the actual path to your clean.py script
+
       - name: Mv zipped file to output
         run: mv *.zip output
 
