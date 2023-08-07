@@ -44,7 +44,13 @@ jobs:
       - name: Mv zipped file to output
         run: mv *.zip output
 
+      - name: Mv result file to output
+        run: mv results.txt output
+
+      - name: Mv final model file to output
+        run: mv *.joblib output
+
       - uses: actions/upload-artifact@v3
         with:
           name: data_output
-          path: output/Datacleaned.zip
+          path: output

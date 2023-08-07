@@ -58,9 +58,9 @@ with zipfile.ZipFile("DataCleaned.zip", 'w') as zipf:
     zipf.write('test.csv')
 
 # Remove the temporary CSV files
-import os
-os.remove('train.csv')
-os.remove('test.csv')
+#import os
+#os.remove('train.csv')
+#os.remove('test.csv')
 
 
 
