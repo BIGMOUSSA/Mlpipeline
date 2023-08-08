@@ -38,6 +38,9 @@ jobs:
         with:
           node-version: '16'  # Explicitly specify Node.js 16
 
+      - name: Run pytest
+        run: pytest pytest_csv_columns.py
+        
       - name: Run cleanData
         run: python cleanData.py  # Replace 'path/to/clean.py' with the actual path to your clean.py script
 
